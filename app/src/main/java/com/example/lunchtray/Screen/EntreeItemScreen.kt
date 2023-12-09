@@ -3,6 +3,7 @@ package com.example.lunchtray.Screen
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.selection.selectable
@@ -21,6 +22,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.ViewModel
 import com.example.lunchtray.R
 import com.example.lunchtray.data.Dish
 
@@ -29,7 +31,7 @@ fun EntreeItemScreen(
     onNextButtonClicked: (Dish) -> Unit,
     onCancelButtonClicked: () -> Unit,
 
-    viewModel: ViewModel = ViewModel()
+    viewModel: LunchTrayAPPViewModel = LunchTrayAPPViewModel()
 ) {
     var selectedValue by remember {
         mutableStateOf(
@@ -43,14 +45,9 @@ fun EntreeItemScreen(
     Column(
         modifier = Modifier.padding(8.dp)
     ) {
+        Spacer(modifier = Modifier.padding(top = 20.dp))
         val getEntreeList = viewModel.entreeList
-        Text(
-            text = "Choose Entree",
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier
-                .padding(20.dp)
-                .align(Alignment.CenterHorizontally)
-        )
+
         getEntreeList.forEach { item ->
             Row(
                 modifier = Modifier.selectable(

@@ -1,11 +1,16 @@
 <resources>
-    <string name="app_name">LunchTray</string>
+    <string name="app_name">Lunch Tray</string>
     <string name="lunchTray">Lunch Tray</string>
     <string name="startOrder">Start Order</string>
+
     <string name="cauliflower">Cauliflower</string>
     <string name="cancel">Cancel</string>
     <string name="next">Next</string>
     <string name="orderCheckOut">Order CheckOut</string>
     <string name="orderSummary">Order Summary</string>
     <string name="submit">Submit</string>
+    <string name="chooseEntree">Choose Entree</string>
+    <string name="chooseSidedish">Choose Side Dish</string>
+    <string name="chooseAccompaniment">Choose Accompaniment</string>
+    <string name="back_button">Arrow Back</string>
 </resources>

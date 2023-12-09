@@ -30,18 +30,12 @@ fun OrderCheckOut(
     modifier: Modifier = Modifier
 ) {
     Column {
-        Text(
-            text = stringResource(R.string.orderCheckOut),
-            fontWeight = FontWeight.Bold,
-            modifier = Modifier
-                .padding(15.dp)
-                .align(Alignment.CenterHorizontally)
-        )
+        Spacer(modifier = Modifier.padding(top = 20.dp))
         Text(
             text = stringResource(R.string.orderSummary),
             fontWeight = FontWeight.Bold,
             modifier = Modifier
-                .padding(start = 20.dp, bottom = 10.dp)
+                .padding(start = 20.dp, bottom = 10.dp, top = 20.dp)
                 .align(Alignment.Start)
         )
         dishes.forEach { item ->

@@ -5,7 +5,7 @@ import com.example.lunchtray.data.Dish
 
 private const val TAX = 0.84
 
-class ViewModel: ViewModel(){
+class LunchTrayAPPViewModel: ViewModel(){
 
     val entreeList = listOf<Dish>(
         Dish("Cauliflower", "Whole cauliflower, brined, roasted, and deep fried", 7.00 ),
